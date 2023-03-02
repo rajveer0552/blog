@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_051106) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_103314) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -22,7 +22,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_051106) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
-    t.integer "dob"
+    t.integer "date_of_birth"
+    t.string "adress"
+    t.integer "mobile_number"
+  end
+
+  create_table "vlogs", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

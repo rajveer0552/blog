@@ -14,3 +14,7 @@ student = Student.create(first_name:"ravi", dob:24/03/2000)
 		dob: "27/12/2022 #{o+1}"
 		)
 end
+Student.all.each do |student|
+	student.vlogs.create(title: "Dummy blog for student #{student.id}}", content: "custom content pending")
+student.vlogs.create(title: "Dummy blog for student #{student.id}", content: "custom content pending")
+end

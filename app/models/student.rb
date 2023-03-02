@@ -1,3 +1,4 @@
 class Student < ApplicationRecord
-	validates :first_name, :dob, presence: true
+	has_many :vlogs
+	validates :first_name, :date_of_birth, presence: true
 end
